@@ -1,13 +1,206 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  background-color: #f3f3f3;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Common Class */
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*Non Common class*/
+
+.current {
+  font-size: 22px;
+}
+
+.balance_amount {
+  font-size: 45px;
+}
+
+.currentTime {
+  font-size: 14px;
+  color: #888;
+}
+
+.main-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.movements_list {
+  padding-inline-start: 0px;
+  background: #fff;
+  height: 60vh;
+  overflow-y: scroll;
+  padding: 20px 40px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  box-shadow: 7px -5px 33px 0px rgba(232, 232, 232, 0.8);
+}
+
+.green,
+.addoperation {
+  background: linear-gradient(to top left, #39b385, #9be15d);
+}
+.red,
+.reduceoperation {
+  background: linear-gradient(to top left, #e52a8d, #ff585f);
+}
+
+.green,
+.red {
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.movements_data {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #80808030;
+  margin-bottom: 20px;
+}
+.movements_list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.movements_list::-webkit-scrollbar-thumb {
+  background: rgb(202, 202, 202);
+  border-radius: 10px;
+}
+
+.passbook {
+  width: 60%;
+}
+.activity {
+  width: 40%;
+  gap: 30px;
+  flex-direction: column;
+}
+.bank_account {
+  gap: 30px;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+.addoperation,
+.reduceoperation {
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+}
+
+.button {
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.8rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.addoperation input,
+.reduceoperation input {
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+.addoperation .display,
+.reduceoperation .display {
+  gap: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.welcome {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.logo {
+  height: 5.25rem;
+}
+
+.login {
+  display: flex;
+}
+
+.login__input {
+  font-family: inherit;
+  text-align: center;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+.login__input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.login__input::placeholder {
+  color: #bbb;
+}
+
+.login__btn {
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login__btn:hover,
+.login__btn:focus,
+.btn--sort:hover,
+.btn--sort:focus {
+  outline: none;
+  color: #777;
+}
+
+.login.show {
+  display: flex;
+}
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
+.logout {
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #444;
+  border: none;
+  background: white;
+  cursor: pointer;
+  box-shadow: 3px 2px 4px 0px rgba(0,0,0,0.23);
+  font-size: 15px;
+  font-weight: 600;
 }
